@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+#left{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+
+}
+#right{
+    position: relative;
+    height:100% ;
+    width: 50%;
+}
+#nav{
+    height:100px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+  position: relative;
+    z-index: 999;
+    color: #fff;
+    animation-name:mc;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+ animation-fill-mode: forwards;
+ animation-direction: normal;
+
+}
+#nav h1{
+    font-family:ogg;
+    text-transform: uppercase;
+    font-size: 22px;
+}#nav i{
+    font-size: 20px;
+}
+#left img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+    left: 0;
+    z-index: 99;
+    animation-name:roti;
+    animation-delay: 1s;
+    animation-duration: 1s;
+ animation-fill-mode: forwards;
+ opacity: 0;
+}
+#left>h1{
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+    color: #fff;
+    z-index: 99;
+    font-size: 100px;
+    font-family: voyage;
+    font-family:ogg ;
+    text-align: right;
+    line-height: 75px;
+    opacity: 0;
+    animation-name: bc;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+#img1{
+    position:absolute;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    animation-name:move;
+animation-duration: 1s;
+    left: 40%;
+    animation-fill-mode: forwards;
+    transform: translate(-50%,0);
+}
+#img2{
+    position:absolute;
+    height: 290px;
+    width: 220px;
+    object-fit: cover;
+    left: 10%;
+    top: 50%;
+    transform: translate(0,-50%);
+    animation-name:move;
+    animation-duration: 1s;
+ animation-fill-mode: forwards;
+}
+#img3{
+height:150px;
+bottom: 0;
+left: 50%;
+position: absolute;
+width: 160px;
+object-fit: cover;
+animation-name:move;
+animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#right>h1{
+    font-size: 50px;
+    position: absolute;
+    font-family: voyage;
+    rotate :-90deg;
+    right: -14%;
+    top: 24%;
+}
+#overlay{
+    height:100% ;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgb(174, 70, 70);
+    animation-name:move;
+    animation-delay: 1.5s;
+ animation-fill-mode: forwards;
+}
+@keyframes move{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+       transform: translateX(0);
+       opacity: 1;
+    }
+}
+@keyframes roti{
+    0%{
+        transform: rotate(30deg) scale(1.6);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+@keyframes bc{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bc{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
